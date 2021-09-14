@@ -1,0 +1,45 @@
+<person_info>
+          <person sl_no="1">
+                <name>
+                    <first_name>John</first_name>
+                    <last_name>Doe</last_name>
+                </name>
+                <adress>
+                    <house>H#38</house>
+                    <road>R#3</road>
+                    <area>Banani</area>
+                    <city>Dhaka</city>
+                </adress>
+                <department>Sales </department>
+                <salary>$20000 </salary>
+           </person>
+           <person sl_no="2">
+                <name>
+                    <first_name>Mark</first_name>
+                    <last_name>Zuckerberg</last_name>
+                </name>
+                <adress>
+                    <flat>A/1</flat>
+                    <house>20</house>
+                    <road>18</road>
+                    <area>Mirpur</area>
+                    <city>Dhaka</city>
+                </adress>
+                <department> Accounts </department>
+                <salary>$12000</salary>
+            </person>
+            <person sl_no="3">
+                <name>
+                    <first_name>Ala</first_name>
+                    <last_name>Ala Voski</last_name>
+                </name>
+                <adress>
+                    <house>38</house>
+                    <road>3</road>
+                    <area>Motijheel</area>
+                    <city>Dhaka</city>
+                </adress>
+                <department>Human Resource</department>
+                <salary>$30000</salary>
+            </person>
+</person_info>
