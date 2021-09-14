@@ -5,8 +5,9 @@
                     <last_name>Doe</last_name>
                 </name>
                 <adress>
-                    <house>H#38</house>
-                    <road>R#3</road>
+                    <flat></flat>
+                    <house>38</house>
+                    <road>3</road>
                     <area>Banani</area>
                     <city>Dhaka</city>
                 </adress>
@@ -34,10 +35,11 @@
                     <last_name>Ala Voski</last_name>
                 </name>
                 <adress>
+                    <flat></flat>
                     <house>38</house>
                     <road>3</road>
                     <area>Motijheel</area>
-                    <city>Dhaka</city>
+                    <city></city>
                 </adress>
                 <department>Human Resource</department>
                 <salary>$30000</salary>
