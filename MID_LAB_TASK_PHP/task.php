@@ -2,8 +2,8 @@
 //1
 $length = 5.00;
 $height = 4.00;
- echo "The area of a Rectangle =".($length*$height)."\n";
- echo "The perimeter of a Rectangle =".(($length+$height)*2)."\n";
+$ans1 = $length*$height;
+$ans2 = (($length+$height)*2);
 
 echo "<table border=1>
 			<tr>
@@ -12,30 +12,51 @@ echo "<table border=1>
 			</tr>";
 
 		echo "<tr>
-				<td>Problem-01</td>
 				<td>
-        The area of a Rectangle ={($length*$height)}
-        The perimeter of a Rectangle ={(($length+$height)*2)}
+        Problem-01:<br>
+        length = 5.00;<br>
+        height = 4.00;
+        </td>
+				<td>
+        The area of a Rectangle ={$ans1}<br>
+        The perimeter of a Rectangle ={$ans2}
 
         </td>
 			</tr>";
-	}
+      $ammount = 10000;
+      $ans1 = ($ammount*0.15);
+		echo "<tr>
+				<td>
+        Problem-02<br>
+        Ammount = 10000
+        </td>
+				<td>
+        VAT ={($ans1}<br>
 
-	echo "</table>";
+        </td>
+			</tr>";
 
-//2
-$ammount = 10000;
-echo "VAT = ".$ammount*0.15."\n";
+      $num = 19;
+      if ($num%2==0) {
+        echo $num." is even<br>";
+      }
+      else {
+        echo $num." is odd<br>";
+      }
 
-//3
-$num = 19;
-if ($num%2==0) {
-  echo $num." is even\n";
-}
-else {
-  echo $num." is odd\n";
-}
+		echo "<tr>
+				<td>
+        Problem-03<br>
+        Number is = 19
+        </td>
+				<td>
+        Number 19 is ODD<br>
 
+        </td>
+			</tr>";
+
+
+echo "</table>";
 //4
 $a =1;
 $b =2;
@@ -43,13 +64,13 @@ $c =3;
 
 if($a>$b and $a>$c)
 {
-    echo $a." is Largest\n";
+    echo $a." is Largest<br><br>";
 }
 elseif ($b>$a and $b>$c) {
-  echo $b." is Largest\n";
+  echo $b." is Largest<br><br>";
 }
 else {
-  echo $c." is Largest\n";
+  echo $c." is Largest<br><br>";
 }
 
 //5
@@ -57,7 +78,7 @@ else {
 for ($i=10; $i <101 ; $i++) {
   if ($i%2!=0)
   {
-    echo $i."is a odd number\n";
+    echo $i." is a odd number<br><br>";
   }
 }
 
@@ -70,7 +91,7 @@ foreach ($numbers as $value) {
     $largest = $value;
   }
 }
-echo $largest."is a the largest number\n\n";
+echo $largest." is a the largest number<br><br>";
 
 //7
 
@@ -80,17 +101,18 @@ for ($i=1; $i <= 3; $i++) {
   for ($j=1; $j <= $i; $j++) {
     echo "*";
   }
-  echo "\n";
+  echo "<br>";
+  echo "<br>";
 }
 
-echo "\n\n";
+echo "<br><br>";
 //ii
 
 for ($i=3; $i >= 1; $i--) {
   for ($j=1; $j <= $i; $j++) {
     echo $j;
   }
-  echo "\n\n";
+  echo "<br><br>";
 }
 
 //iii
@@ -104,7 +126,7 @@ $c='A';
       echo $c;
       $c++;
    }
-   echo "\n\n";
+   echo "<br><br>";
  }
 
 
