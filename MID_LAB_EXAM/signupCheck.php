@@ -1,31 +1,19 @@
-<?php 
-	//session_start();
+<?php
 
-	if(isset($_POST['submit'])){
+	if(isset($_POST['submit']) ){
 
+		$id 	= $_POST['id'];
 		$username 	= $_POST['username'];
-		$email 		= $_POST['email'];
 		$password 	= $_POST['password'];
+		$cpassword 	= $_POST['cpassword'];
+		$role 	= $_POST['role'];
 
 		if($username != ""){
-			if($password != ""){
-				if($email !=""){
-
-					/*$_SESSION['username'] = $username;
-					$_SESSION['password'] = $password;
-					$_SESSION['email'] = $email;*/
-
-					/*setcookie('username', $username, time()+3600, '/');
-					setcookie('password', $password, time()+3600, '/');
-					setcookie('email', $email, time()+3600, '/');*/
-
-					/*$myfile = fopen('user.txt', 'w');
-					$myuser = $username."|".$password."|".$email;
-					fwrite($myfile, $myuser);
-					fclose($myfile);*/
+			if($password != "" and $id!=""){
+				if($_POST['password']==$_POST['cpassword']){
 
 					$myfile = fopen('user.txt', 'a');
-					$myuser = $username."|".$password."|".$email."\r\n";
+					$myuser = $id."|".$username."|".$password."|".$role."\r\n";
 					fwrite($myfile, $myuser);
 					fclose($myfile);
 
