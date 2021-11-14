@@ -44,6 +44,14 @@
 	function getUserByName($name){
 		$con = getConnection();
 		$sql = "select * from products where name={$name}";
+
+		$result = mysqli_query($con, $sql);
+		return $result;
+	}
+
+	function SearchByName($name){
+		$con = getConnection();
+		$sql = "select * from products where name like '%{$name}%'";
 		$result = mysqli_query($con, $sql);
 		return $result;
 	}

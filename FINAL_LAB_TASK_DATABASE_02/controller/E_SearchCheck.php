@@ -1,6 +1,5 @@
 <?php
 	require_once('../model/usersModel.php');
-  $result;
 
   $name = $_POST['search'];
 
@@ -8,10 +7,12 @@
   {
     if($name != '')
     {
-      $result = getUserByName($name);
-      print_r($result);
+      $result = SearchByName($name);
     }
   }
+	else {
+		echo "No Product found";
+	}
 ?>
 
 
@@ -37,10 +38,10 @@
 						<th>ACTION</th>
 					</tr>
 
-				<?php while($data = mysqli_fetch_assoc($result)) { ?>
+				<?php while ($data = mysqli_fetch_assoc($result)) {?>
 					<tr>
 						<td><?=$data['name']?></td>
-						<td><?=($data['buyingPrice'])-($data['sellingPrice'])?></td>
+						<td><?=($data['sellingPrice'])-($data['buyingPrice'])?></td>
 
 						<td>
 							<a href="C_Edit.php?id=<?=$data['id']?>"> EDIT </a> |

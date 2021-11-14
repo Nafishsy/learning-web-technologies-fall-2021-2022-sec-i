@@ -28,7 +28,7 @@
 				<?php while($data = mysqli_fetch_assoc($result)) { ?>
 					<tr>
 						<td><?=$data['name']?></td>
-						<td><?=($data['buyingPrice'])-($data['sellingPrice'])?></td>
+						<td><?=($data['sellingPrice'])-($data['buyingPrice'])?></td>
 
 						<td>
 							<a href="C_Edit.php?id=<?=$data['id']?>"> EDIT </a> |
