@@ -1,11 +1,25 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: lightblue;
+  background-color: aqua;
+}
+
+
+*{
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+  font-weight: normal;
 }
 
 .grid{
   display: grid;
   align-items: center;
   justify-content: center;
+}
+
+.grid > button {
+  font-size: 20%;
+  fonr co
+  border: 1px solid white;
+  background-color: rgba(255, 0, 0, 0.5);
 }
