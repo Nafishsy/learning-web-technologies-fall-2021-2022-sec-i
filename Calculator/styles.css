@@ -1,25 +1,28 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: aqua;
-}
-
-
-*{
-  box-sizing: border-box;
-  font-family: Georgia, serif;
-  font-weight: normal;
+  background-color: lightblue;
 }
 
 .grid{
   display: grid;
   align-items: center;
   justify-content: center;
+  grid-template-columns: repeat(4,100px);
 }
 
 .grid > button {
-  font-size: 20%;
-  fonr co
-  border: 1px solid white;
-  background-color: rgba(255, 0, 0, 0.5);
+  font-size: 2rem;
+  border: 1px, solid Black;
+  outline: none;
+  background-color: white;
+}
+
+.output {
+  grid-column: 1 / -1 ;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
 }
