@@ -45,16 +45,25 @@
 
 	<?php while($data = mysqli_fetch_assoc($result)) { ?>
 		<tr>
-			<td><?=$data['sid']?></td>
-			<td><?=$data['sName']?></td>
-			<td><?=$data['sEmail']?></td>
-			<td><?=$data['status']?></td>
+			<td><?=$data['s_id']?></td>
+			<td><?=$data['s_name']?></td>
+			<td><?=$data['s_email']?></td>
+			<td>
+				<?php if($data['status']=='ACTIVE')
+				echo "<h5 style=color:green;>ACTIVE ✓</h2>";
+				elseif ($data['status']=='PENDING') {
+					echo "<h5 style=color:yellow;>PENDING !!</h2>";
+				}
+				else {
+					echo "<h5 style=color:red;>REJECTED X</h2>";
+				}
+			?></td>
 
 			<td>
 
-				<a href="../controller/active.php?sid=<?=$data['sid']?>&status=<?='ACTIVE'?>"> ACTIVE </a> |
-				<a href="../controller/active.php?sid=<?=$data['sid']?>&status=<?='PENDING'?>"> PENDING </a> |
-				<a href="../controller/active.php?sid=<?=$data['sid']?>&status=<?='REJECTED'?>"> REJECTED </a>
+				<a href="../controller/active.php?sid=<?=$data['s_id']?>&status=<?='ACTIVE'?>"> ACTIVE </a> |
+				<a href="../controller/active.php?sid=<?=$data['s_id']?>&status=<?='PENDING'?>"> PENDING </a> |
+				<a href="../controller/active.php?sid=<?=$data['s_id']?>&status=<?='REJECTED'?>"> REJECTED </a>
 
 			</td>
 		</tr>

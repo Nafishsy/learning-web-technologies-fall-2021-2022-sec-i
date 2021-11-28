@@ -53,20 +53,32 @@
       			<th>ROLE</th>
       		</tr>
 
-      	<?php while($data = mysqli_fetch_assoc($result)) { ?>
-      		<tr>
-      			<td><?=$data['id']?></td>
-      			<td><?=$data['username']?></td>
-      			<td><?=$data['password']?></td>
-      			<td><?=$data['email']?></td>
-      			<td><?=$data['role']?></td>
-      			<td>
-      				<a href="../views/edit.php?id=<?=$data['id']?>"> EDIT </a> |
-      				<a href="../views/delete.php?id=<?=$data['id']?>"> DELETE </a>
-      			</td>
-      		</tr>
+					<?php while($data = mysqli_fetch_assoc($result)) { ?>
+						<tr>
+							<td><?=$data['s_id']?></td>
+							<td><?=$data['s_name']?></td>
+							<td><?=$data['s_email']?></td>
+							<td>
+								<?php if($data['status']=='ACTIVE')
+								echo "<h5 style=color:green;>ACTIVE ✓</h2>";
+								elseif ($data['status']=='PENDING') {
+									echo "<h5 style=color:yellow;>PENDING !!</h2>";
+								}
+								else {
+									echo "<h5 style=color:red;>REJECTED X</h2>";
+								}
+							?></td>
 
-      	<?php } ?>
+							<td>
+
+								<a href="../controller/active.php?sid=<?=$data['s_id']?>&status=<?='ACTIVE'?>"> ACTIVE </a> |
+								<a href="../controller/active.php?sid=<?=$data['s_id']?>&status=<?='PENDING'?>"> PENDING </a> |
+								<a href="../controller/active.php?sid=<?=$data['s_id']?>&status=<?='REJECTED'?>"> REJECTED </a>
+
+							</td>
+						</tr>
+
+					<?php } ?>
       	</table>
 			</fieldset>
 		</td>

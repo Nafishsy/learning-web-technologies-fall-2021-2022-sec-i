@@ -1,10 +1,23 @@
 <?php
-	include('header.php');
 	require_once('../model/usersModel.php');
-	$result = getAllUsers();
-	$count = mysqli_num_rows($result);
+
+  $name = $_POST['search'];
+
+  if(isset($_POST['searchName']))
+  {
+    if($name != '')
+    {
+      $result = SearchByNameForAccounts($name);
+      $count = mysqli_num_rows($result);
+      if($count<1)
+      {
+        echo "<h1 style=color:red;>NO ACCOUNT FOUND</h1>";
+      }
+    }
+  }
 
 ?>
+
 
 <!DOCTYPE html>
 <html>

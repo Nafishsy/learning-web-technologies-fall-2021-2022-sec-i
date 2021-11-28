@@ -57,6 +57,12 @@
 
 	function SearchByName($name){
 		$con = getConnection();
+		$sql = "select * from students where s_name like '%{$name}%'";
+		$result = mysqli_query($con, $sql);
+		return $result;
+	}
+	function SearchByNameForAccounts($name){
+		$con = getConnection();
 		$sql = "select * from accounts where username like '%{$name}%'";
 		$result = mysqli_query($con, $sql);
 		return $result;
@@ -75,7 +81,7 @@
 	function setStatus($id,$status){
 		$con = getConnection();
 		echo $status;
-		$sql = "update students set status='{$status}' where sid={$id}";
+		$sql = "update students set status='{$status}' where s_id={$id}";
 
 
 		if(mysqli_query($con, $sql)){

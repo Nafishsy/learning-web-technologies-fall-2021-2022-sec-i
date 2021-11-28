@@ -4,7 +4,7 @@
 	$host = "localhost";
 	$dbuser = "root";
 	$dbpass = "";
-	$dbname = "project";
+	$dbname = "unihub";
 
 	function getConnection(){
 		global $host;
