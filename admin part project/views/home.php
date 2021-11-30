@@ -9,7 +9,7 @@
 </head>
 <body>
 	<center>
-		<h1>Welcome home!<?php echo " ".$_COOKIE['username'] ?></h1>
+		<h1>Welcome home!<?php echo " ".$_COOKIE['username']?></h1>
 	<a href="profile.php">View Profile</a> <br>
 	<a href="registrationList.php">Registration List</a> <br>
 	<a href="userlist.php">User List </a> <br>

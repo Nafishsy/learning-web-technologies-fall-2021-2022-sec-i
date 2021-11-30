@@ -21,6 +21,7 @@
 	}
 	</style>
 	<script>
+	
 		function nameValid() {
 
 			let x = document.getElementById("name").value;
@@ -63,8 +64,8 @@
 			<th>USERNAME</th>
 			<th>PASSWORD</th>
 			<th>EMAIL</th>
-			<th>ACTION</th>
 			<th>ROLE</th>
+			<th> ACTION</th>
 		</tr>
 
 	<?php while($data = mysqli_fetch_assoc($result)) { ?>

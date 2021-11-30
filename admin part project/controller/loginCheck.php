@@ -18,17 +18,25 @@
 					$data = getRolebyuName($username);
 
 					setcookie('role', $data['role'], time()+3600, '/');
+					$flag ='Yes';
+					setcookie('id', $data['id'], time()+3600, '/');
 					header('location: ../views/home.php');
 				}else{
-					echo "not found";
-					//header('location: ../views/login.html');
+					//echo "not found";
+					$flag ='No';
+					setcookie('found', $flag, time()+3600, '/');
+					header('location: ../views/login.php');
 				}
 
 			}else{
-				echo "invalid password....";
+				$flag ='No';
+				setcookie('found', $flag, time()+3600, '/');
+				header('location: ../views/login.php');
 			}
 		}else{
-			echo "invalid username....";
+			$flag ='No';
+			setcookie('found', $flag, time()+3600, '/');
+			header('location: ../views/login.php');
 		}
 	}
 ?>

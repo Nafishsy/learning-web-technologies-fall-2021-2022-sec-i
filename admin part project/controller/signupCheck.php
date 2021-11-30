@@ -8,8 +8,14 @@
 		$email 		= $_POST['email'];
 		$phone 		= $_POST['phone'];
 		$password 	= $_POST['password'];
-		$role 	= $_POST['role'];
 
+		if (!empty($_POST['role'])) {
+			$role = $_POST['role'];
+			// code...
+		}
+		else {
+		//	$role = $_POST['role'];
+		}
 		if($username != ""){
 			if($password != ""){
 				if($email !=""){

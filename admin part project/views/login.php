@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
 	<title>Login</title>
@@ -72,6 +74,23 @@ function passValid() {
 						<input type="submit" name="submit" value="Submit" >
 
 						<a href="signup.html"> Signup </a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<?php
+						if(isset($_COOKIE['found']))
+						{
+							if ($_COOKIE['found']=='yes') {
+								// code...
+							}
+							else {
+								echo "<p style=color:red>No user found</p>";
+								setcookie('found', 'none', time()-3600, '/');
+							}
+						}
+						?>
 					</td>
 				</tr>
 			</table>

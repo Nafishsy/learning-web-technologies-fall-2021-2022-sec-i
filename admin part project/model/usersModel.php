@@ -47,6 +47,14 @@
 		return $data;
 	}
 
+	function getIDByname($id){
+		$con = getConnection();
+		$sql = "select * from accounts where id={$id}";
+		$result = mysqli_query($con, $sql);
+		$data = mysqli_fetch_assoc($result);
+		return $data;
+	}
+
 	function getRolebyuName($user){
 		$con = getConnection();
 		$sql = "select * from accounts where username='{$user}'";
@@ -108,4 +116,16 @@
 		$data = mysqli_fetch_assoc($s);
 		return $data;
 	}
+
+	function Post($user,$userpost){
+		$con = getConnection();
+		$sql = "insert into posts values('', '{$user['id']}', '{$userpost}', '{$user['username']}') ";
+
+		if(mysqli_query($con, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 ?>
