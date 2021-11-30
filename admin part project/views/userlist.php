@@ -20,6 +20,29 @@
 	  text-align: left;
 	}
 	</style>
+	<script>
+		function nameValid() {
+
+			let x = document.getElementById("name").value;
+
+			let e=document.getElementById("nError");
+
+			let text
+
+			if(x=='')
+			{
+				text="Please fill the input field";
+			}
+			else if (!isNaN(x))
+			{
+				text="Username cannot be just a number";
+			}
+			else {
+				text= '';
+			}
+			e.innerHTML = text;
+		}
+</script>
 </head>
 <body>
 
@@ -29,8 +52,9 @@
 	</center>
 
 	<form method="post" action="../controller/SearchCheckForUsers.php">
-		<input type="text" name="search" value="" />
+		<input type="text" name="search" value="" oninput="nameValid()" id="name">
 		<input type="submit" name="searchName" value="Search by name"> <br><br>
+		<p id="nError" style="color:red">
 	</form>
 
 	<table border="1" align="center">
