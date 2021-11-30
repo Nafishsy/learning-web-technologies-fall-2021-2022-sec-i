@@ -100,4 +100,12 @@
 			return false;
 		}
 	}
+
+	function GetBio($username){
+		$con = getConnection();
+		$sql = "select post from posts where username='{$username}'";
+		$s=mysqli_query($con, $sql);
+		$data = mysqli_fetch_assoc($s);
+		return $data;
+	}
 ?>

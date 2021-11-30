@@ -1,3 +1,12 @@
+<?php
+
+include('header.php');
+require_once('../model/usersModel.php');
+$string = GetBio($_COOKIE['username']);
+
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -27,7 +36,8 @@
 
       <h2>Name: <?php echo $_COOKIE['username'] ?></h2>
       <h2>Role: <?php echo $_COOKIE['role'] ?></h2>
-      <h2>Bio: </h2>
+      <h2>Bio:</h2>
+      <textarea placeholder="<?php echo $string['post']; ?>" cols="100" rows="25"></textarea>
     </div>
   </body>
 </html>
